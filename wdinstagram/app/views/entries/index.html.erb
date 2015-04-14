@@ -1,0 +1,9 @@
+<h2><a href="/entries/new">Add Photo</a></h2>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li> Photo#: <%=entry.id%> </li>
+    <li> Author: <%= entry.author%> </li>
+    <li> <a href="/entries/<%=entry.id%>"><img src="<%=entry.photo_url%>" alt="photo"></a> </li>
+  <%end%>
+</ul>
